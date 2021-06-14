@@ -8,7 +8,6 @@ public class Track {
 	
 	
 	public Track(Artist artist, String name, int duration) {
-		super();
 		this.artist = artist;
 		this.name = name;
 		this.duration = duration;
@@ -30,18 +29,17 @@ public class Track {
 	}
 	
 	public String getDurationString() {
-		String s;
-		int minute = this.duration/60;
+		int minutes = this.duration/60;
+		String duracaoTotal = Integer.toString(minutes) + ":";
 		int seconds = this.duration%60;
-		if (seconds < 10) {
-			s = "0" + seconds;
+		if (seconds >= 10) {
+			duracaoTotal += Integer.toString(seconds);
 		}else {
-			s = " " + seconds;
+			duracaoTotal += "0" + Integer.toString(seconds);
 			
 		}
-		String tempo = " " + minute + ":" + s;
 	
-		return (tempo);
+		return (duracaoTotal);
 		
 	}
 	

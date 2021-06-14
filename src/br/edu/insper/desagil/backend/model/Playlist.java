@@ -25,8 +25,8 @@ public class Playlist {
 		return tracks;
 	}
 	
-	public HashMap<String,Integer> getRatings(){
-		return (HashMap<String,Integer>) this.ratings;
+	public Map<String,Integer> getRatings(){
+		return ratings;
 	}
 	
 	public void putRating(String usuario, int avaliacao) {

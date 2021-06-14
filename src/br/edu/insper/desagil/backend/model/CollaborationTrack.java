@@ -7,9 +7,9 @@ import java.util.List;
 public class CollaborationTrack extends Track {
 	private List<Artist> collaborators;
 	
-	public CollaborationTrack(Artist artist, List<Artist> collaborators, String name, int duration) {
+	public CollaborationTrack(Artist artist, List<Artist> collaborator, String name, int duration) {
 		super(artist, name, duration);
-		this.collaborators = collaborators;
+		this.collaborators = collaborator;
 	}
 	
 	@Override
